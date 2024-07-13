@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer times</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Prayer times</h1>
+        </div>
+        <div class="times">
+           <div class="element">
+                <span>Subh</span>
+                <div class="time time1"></div>
+           </div> 
+           <div class="element">
+                <span>Dhoher</span>
+                <div class="time time2"></div>
+           </div> 
+           <div class="element">
+                <span>Asr</span>
+                <div class="time time3"></div>
+           </div> 
+           <div class="element">
+                <span>Maghreb</span>
+                <div class="time time4"></div>
+           </div> 
+           <div class="element">
+                <span>Ichaa</span>
+                <div class="time time5"></div>
+           </div> 
+        </div>
+    </div>
+
+    <script>
+     fetch('https://api.aladhan.com/v1/timingsByCity?city=Monastir&country=Tunisia&method=1')
+  .then(response => response.json())
+  .then(data => {
+    const timings = data.data.timings
+    console.log(timings)
+    document.querySelector(".time1").innerHTML = `${timings.Fajr}`
+    document.querySelector(".time2").innerHTML = `${timings.Dhuhr}`
+    document.querySelector(".time3").innerHTML = `${timings.Asr}`
+    document.querySelector(".time4").innerHTML = `${timings.Maghrib}`
+    document.querySelector(".time5").innerHTML = `${timings.Isha}`
+  })
+  .catch(error => console.error('Error:', error));
+
+    </script>
+</body>
+</html>
