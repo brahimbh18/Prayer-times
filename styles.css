@@ -1,17 +1,25 @@
 
 .container {
     border: solid 1px black;
-    background-color: wheat;
+    background-color: green;
     display: flex;
     text-align: center;
     flex-direction: column;
-    width: 900px;
-    height: 400px;
+    width: 60%;
+    height: 650px;
 
     margin-right: auto;
     margin-left: auto;
     border: 2px solid black;
     border-radius: 20px;
+
+    background-image: url("pictures/images.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+span {
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .title {
@@ -19,18 +27,19 @@
 }
 
 .times {
-    padding: 30px;
+    
     margin-right: auto;
     margin-left: auto;
     display: flex;
     flex-direction: row-reverse ;
-    justify-content: space-evenly;
-    width: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
     height: 500px;
 }
 .element {
-    width: 150px;
-    height: 200px;
+    width: 5vw;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,9 +48,13 @@
 
 .time{
     padding: 5%;
-    background-color: palegoldenrod;
-    width: 80%;
-    height: 70%;
+    background-color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: aliceblue;
+    opacity: 0.5;
+    width: 10rem;
+    height: 40%;
     border: 1px solid black;
     border-radius: 15%;
 }
